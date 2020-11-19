@@ -1,0 +1,34 @@
+model:
+    arch: hardnet
+data:
+    dataset: pascal
+    train_split: train
+    val_split: val
+    img_rows: 'same'
+    img_cols: 'same'
+    path: /home/vsoul/bm_dataset/VOCdevkit/VOC2012/
+    sbd_path: /home/vsoul/bm_dataset/VOCdevkit/benchmark/benchmark_RELEASE/
+training:
+    train_iters: 100000
+    batch_size: 4
+    val_interval: 500
+    n_workers: 8
+    print_interval: 10
+    augmentations:
+        hflip: 0.5
+        rscale_crop: [512, 512]
+    optimizer:
+        name: 'sgd'
+        lr: 0.02
+        weight_decay: 0.0005
+        momentum: 0.9
+    loss:
+        name: 'bootstrapped_cross_entropy'
+        min_K: 4096
+        loss_th: 0.3
+        size_average: True
+    lr_schedule: 
+        name: 'poly_lr'
+        max_iter: 100000
+    resume: None
+    finetune: None    
