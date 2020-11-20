@@ -249,7 +249,7 @@ if __name__ == "__main__":
         "--config",
         nargs="?",
         type=str,
-        default="configs/hardnet-pascal.yml",
+        default="/content/FCHardNet-self/configs/hardnet-pascal.yml",
         help="Configuration file to use",
     )
 
