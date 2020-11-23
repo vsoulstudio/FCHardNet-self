@@ -12,7 +12,7 @@ training:
     train_iters: 100000
     batch_size: 16
     val_interval: 500
-    n_workers: 0
+    n_workers: 2
     print_interval: 10
     augmentations:
         hflip: 0.5
