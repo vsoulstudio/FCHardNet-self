@@ -252,7 +252,7 @@ class TransitionUp(nn.Module):
         return out
 
 class hardnet(nn.Module):
-    def __init__(self, n_classes=19):
+    def __init__(self, n_classes=21):
         super(hardnet, self).__init__()
 
         first_ch  = [16,24,32,48]
