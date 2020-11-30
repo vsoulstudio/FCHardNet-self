@@ -10,9 +10,9 @@ data:
     sbd_path: /content/VOCdevkit/benchmark/benchmark_RELEASE/
 training:
     train_iters: 100000
-    batch_size: 16
+    batch_size: 4
     val_interval: 100
-    n_workers: 2
+    n_workers: 8
     print_interval: 10
     augmentations:
         hflip: 0.5
