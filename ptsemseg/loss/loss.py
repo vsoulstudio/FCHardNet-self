@@ -75,5 +75,5 @@ def bootstrapped_cross_entropy2d(input, target, min_K, loss_th, weight=None, siz
             weight=weight,
             size_average=size_average,
         )
-    print('loss=',loss,'imput=',input,'target',target,'K',K,'thr',thresh,'we',weight,'sa',size_average)
+    print('loss=',loss,'imput=',input,'target',target,'K',min_K,'thr',thresh,'we',weight,'sa',size_average)
     return loss / float(batch_size)
