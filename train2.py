@@ -62,7 +62,8 @@ def train(cfg, writer, logger):
         img_size=(1024,2048),
     )
 
-    n_classes = t_loader.n_classes
+    # n_classes = t_loader.n_classes
+    n_classes = 21
     trainloader = data.DataLoader(
         t_loader,
         batch_size=cfg["training"]["batch_size"],
