@@ -53,7 +53,7 @@ def bootstrapped_cross_entropy2d(input, target, min_K, loss_th, weight=None, siz
         loss = F.cross_entropy(
             input, target, weight=weight, reduce=False, size_average=False, ignore_index=250
         )
-        print('inputsize',input.size(),';targetsize=',target.size())
+        # print('inputsize',input.size(),';targetsize=',target.size())
         sorted_loss, _ = torch.sort(loss, descending=True)
         
         if sorted_loss[K] > thresh:
