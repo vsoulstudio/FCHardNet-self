@@ -2,7 +2,7 @@ matplotlib
 numpy
 scipy
 --find-links https://download.pytorch.org/whl/torch_stable.html
-torch
+torch==1.5.0+cu101
 --find-links https://download.pytorch.org/whl/torch_stable.html
 torchvision==0.6.0+cu101
 tqdm
