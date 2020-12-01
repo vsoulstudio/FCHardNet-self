@@ -10,8 +10,8 @@ data:
     sbd_path: /content/VOCdevkit/benchmark/benchmark_RELEASE/
 training:
     train_iters: 100000
-    batch_size: 4
-    val_interval: 100
+    batch_size: 8
+    val_interval: 500
     n_workers: 8
     print_interval: 10
     augmentations:
@@ -19,7 +19,7 @@ training:
         rscale_crop: [512,512]
     optimizer:
         name: 'sgd'
-        lr: 0.02
+        lr: 0.002
         weight_decay: 0.0005
         momentum: 0.9
     loss:
@@ -27,8 +27,8 @@ training:
         min_K: 4096
         loss_th: 0.3
         size_average: True
-    lr_schedule: 
+    lr_schedule:
         name: 'poly_lr'
         max_iter: 100000
     resume: None
-    finetune: None    
+    finetune: None
