@@ -9,10 +9,10 @@ data:
     path: /content/VOCdevkit/VOC2012/
     sbd_path: /content/VOCdevkit/benchmark/benchmark_RELEASE/
 training:
-    train_iters: 100000
+    train_iters: 200000
     batch_size: 8
-    val_interval: 500
-    n_workers: 8
+    val_interval: 1000
+    n_workers: 4
     print_interval: 10
     augmentations:
         hflip: 0.5
