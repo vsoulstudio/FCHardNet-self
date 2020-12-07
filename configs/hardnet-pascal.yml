@@ -9,10 +9,10 @@ data:
     path: /content/VOCdevkit/VOC2012/
     sbd_path: /content/VOCdevkit/benchmark/benchmark_RELEASE/
 training:
-    train_iters: 100000
+    train_iters: 90000
     batch_size: 8
-    val_interval: 1000
-    n_workers: 4
+    val_interval: 500
+    n_workers: 6
     print_interval: 10
     augmentations:
         hflip: 0.5
@@ -20,7 +20,7 @@ training:
     optimizer:
         name: 'sgd'
         lr: 0.01
-        weight_decay: 0.0005
+        weight_decay: 0.0001
         momentum: 0.9
     loss:
         name: 'bootstrapped_cross_entropy'
@@ -29,6 +29,6 @@ training:
         size_average: True
     lr_schedule:
         name: 'poly_lr'
-        max_iter: 100000
+        max_iter: 90000
     resume: None
     finetune: None
