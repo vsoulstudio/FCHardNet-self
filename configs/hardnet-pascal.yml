@@ -4,12 +4,12 @@ data:
     dataset: pascal
     train_split: train
     val_split: val
-    img_rows: 'same'
-    img_cols: 'same'
+    img_rows: 512
+    img_cols: 512
     path: /content/VOCdevkit/VOC2012/
     sbd_path: /content/VOCdevkit/benchmark/benchmark_RELEASE/
 training:
-    train_iters: 200000
+    train_iters: 100000
     batch_size: 8
     val_interval: 1000
     n_workers: 4
@@ -19,7 +19,7 @@ training:
         rscale_crop: [512,512]
     optimizer:
         name: 'sgd'
-        lr: 0.002
+        lr: 0.01
         weight_decay: 0.0005
         momentum: 0.9
     loss:
