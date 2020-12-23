@@ -12,16 +12,16 @@ training:
     train_iters: 90000
     batch_size: 8
     val_interval: 500
-    n_workers: 6
-    print_interval: 10
+    n_workers: 4
+    print_interval: 50
     augmentations:
         hflip: 0.5
         rscale_crop: [512,512]
     optimizer:
-        name: 'sgd'
+        name: 'adam'
         lr: 0.01
         weight_decay: 0.0001
-        momentum: 0.9
+#        momentum: 0.9
     loss:
         name: 'bootstrapped_cross_entropy'
         min_K: 4096
